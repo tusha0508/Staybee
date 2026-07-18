@@ -2,11 +2,15 @@
   "name": "staybee",
   "version": "1.0.0",
   "description": "Professional co-hosting property management service website",
-  "main": "index.html",
+  "main": "server.js",
   "scripts": {
-    "start": "npx http-server -p 3000",
+    "start": "node server.js",
     "build": "echo 'Already built - static site ready'",
-    "dev": "npx http-server -p 8000 -c-1"
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
+    "express": "^4.18.2"
   },
   "keywords": [
     "property-management",

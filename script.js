@@ -1,37 +1,63 @@
 // ===================== FORM SUBMISSION =====================
-function handleSubmit(event) {
+function showFormMessage(form, text, type) {
+    const existing = form.querySelector('.form-message');
+    if (existing) {
+        existing.remove();
+    }
+    const message = document.createElement('div');
+    message.className = `form-message ${type}`;
+    message.textContent = text;
+    form.insertBefore(message, form.firstChild);
+}
+
+async function handleSubmit(event) {
     event.preventDefault();
-    
+
     const form = event.target;
     const btn = form.querySelector('.submit-btn');
-    
-    // Disable button and show loading state
+    const originalText = btn.textContent;
+
     btn.disabled = true;
     btn.classList.add('loading');
-    const originalText = btn.textContent;
     btn.textContent = 'Sending...';
-    
-    // Simulate form submission (in production, you'd send to a backend)
-    setTimeout(() => {
-        // Create success message
-        const message = document.createElement('div');
-        message.className = 'form-message success';
-        message.textContent = '✓ Thank you! We\'ll contact you shortly.';
-        form.insertBefore(message, form.firstChild);
-        
-        // Reset form
+
+    const payload = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim(),
+        message: form.message.value.trim(),
+    };
+
+    try {
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            throw new Error(result.error || 'Unable to send message.');
+        }
+
+        showFormMessage(form, '✓ Thank you! Your message has been sent successfully.', 'success');
         form.reset();
-        
-        // Reset button
+    } catch (error) {
+        console.error(error);
+        showFormMessage(form, 'Sorry, there was a problem sending your message. Please try again later.', 'error');
+    } finally {
         btn.disabled = false;
         btn.classList.remove('loading');
         btn.textContent = originalText;
-        
-        // Remove message after 5 seconds
-        setTimeout(() => {
-            message.remove();
-        }, 5000);
-    }, 1000);
+    }
+}
+
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', handleSubmit);
 }
 
 // ===================== SMOOTH SCROLL ENHANCEMENT =====================

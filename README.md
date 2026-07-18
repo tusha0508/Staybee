@@ -8,7 +8,8 @@ A modern, minimalist, and aesthetic website for Staybee co-hosting services. Bui
 - **Responsive Layout** - Works perfectly on all devices (mobile, tablet, desktop)
 - **Fast Loading** - Lightweight static site with no dependencies
 - **SEO Optimized** - Semantic HTML structure
-- **Contact Form** - Built-in contact form for lead generation
+- **Contact Form** - Built-in contact form for lead capture and email notifications
+- **Email Backend** - Node + SendGrid API support for reliable form delivery without SMTP
 - **Performance Optimized** - Optimized images and CSS for fast load times
 - **Accessibility** - WCAG compliant with proper color contrast and keyboard navigation
 
@@ -51,8 +52,10 @@ A modern, minimalist, and aesthetic website for Staybee co-hosting services. Bui
 4. **Option C: Using Node.js**
    ```bash
    npm install
+   cp .env.example .env
+   # Add your SendGrid API key in .env if you want the contact form to send email
    npm run dev
-   # Then visit: http://localhost:8000
+   # Then visit: http://localhost:3000
    ```
 
 ## 📦 Project Structure
@@ -62,8 +65,10 @@ staybee/
 ├── index.html          # Main HTML file
 ├── styles.css          # All styling (responsive & animations)
 ├── script.js           # Interactive features
+├── server.js           # Node backend + SendGrid email endpoint
 ├── package.json        # NPM configuration
 ├── render.yaml         # Render deployment config
+├── .env.example        # Example env vars for SendGrid
 ├── .gitignore          # Git ignore file
 └── README.md           # This file
 ```
@@ -90,10 +95,16 @@ staybee/
 1. **Connect your GitHub repository** to Render
 2. **Configure settings:**
    - **Name:** staybee-website
-   - **Build Command:** (leave empty or use `npm install` if using npm scripts)
+   - **Environment:** Node
+   - **Build Command:** `npm install`
+   - **Start Command:** `npm start`
    - **Publish Directory:** . (current directory)
+3. **Add environment variables** in Render:
+   - `SENDGRID_API_KEY`
+   - `SENDGRID_FROM_EMAIL` (recommended: `no-reply@staybee.com`)
+   - `TO_EMAIL` = `vidhi4joshi@gmail.com`
 
-3. **Click Deploy**
+4. **Click Deploy**
 
 ### Step 3: Add Custom Domain (Optional)
 
@@ -175,11 +186,12 @@ Replace `GA_MEASUREMENT_ID` with your actual Google Analytics ID.
 - Ensure you're viewing the correct version
 
 ### Contact form not working?
-- Currently shows a demo message
-- To make it functional, add a backend service like:
-  - Formspree: https://formspree.io
-  - EmailJS: https://www.emailjs.com
-  - Any REST API endpoint
+- The site now supports a real backend email endpoint.
+- Make sure you set `SENDGRID_API_KEY` before running locally or deploying.
+- You can use SendGrid free tier to get an API key and then set the environment variables:
+  - `SENDGRID_API_KEY`
+  - `SENDGRID_FROM_EMAIL`
+  - `TO_EMAIL`
 
 ### Styles not loading?
 - Ensure `styles.css` is in the same directory as `index.html`
