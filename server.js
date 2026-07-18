@@ -47,7 +47,7 @@ app.post('/api/contact', async (req, res) => {
     console.error('Resend error:', error);
     return res.status(500).json({ error: 'Unable to send email at this time.' });
   }
-};
+});
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
