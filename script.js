@@ -43,7 +43,7 @@ async function handleSubmit(event) {
             throw new Error(result.error || 'Unable to send message.');
         }
 
-        showFormMessage(form, '✓ Thank you! Your message has been sent successfully.', 'success');
+        showFormMessage(form, '✓ We have received your enquiry. We will get in touch with you in 3 working days.', 'success');
         form.reset();
     } catch (error) {
         console.error(error);
