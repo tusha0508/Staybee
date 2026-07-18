@@ -66,6 +66,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const href = this.getAttribute('href');
         if (href !== '#') {
             e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     });
 });
