@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: staybee-website
+    env: static
+    buildCommand: echo "Build complete"
+    startCommand: ""
+    routes:
+      - path: "/"
+        pathPrefix: true
+        destination: /index.html
