@@ -9,7 +9,7 @@ A modern, minimalist, and aesthetic website for Staybee co-hosting services. Bui
 - **Fast Loading** - Lightweight static site with no dependencies
 - **SEO Optimized** - Semantic HTML structure
 - **Contact Form** - Built-in contact form for lead capture and email notifications
-- **Email Backend** - Node + SendGrid API support for reliable form delivery without SMTP
+- **Email Backend** - Node + Resend API support for reliable form delivery without SMTP
 - **Performance Optimized** - Optimized images and CSS for fast load times
 - **Accessibility** - WCAG compliant with proper color contrast and keyboard navigation
 
@@ -100,8 +100,8 @@ staybee/
    - **Start Command:** `npm start`
    - **Publish Directory:** . (current directory)
 3. **Add environment variables** in Render:
-   - `SENDGRID_API_KEY`
-   - `SENDGRID_FROM_EMAIL` (recommended: `no-reply@staybee.com`)
+   - `RESEND_API_KEY` (get from https://resend.com)
+   - `FROM_EMAIL` (your verified sender, or use default onboarding@resend.dev)
    - `TO_EMAIL` = `vidhi4joshi@gmail.com`
 
 4. **Click Deploy**
@@ -186,12 +186,13 @@ Replace `GA_MEASUREMENT_ID` with your actual Google Analytics ID.
 - Ensure you're viewing the correct version
 
 ### Contact form not working?
-- The site now supports a real backend email endpoint.
-- Make sure you set `SENDGRID_API_KEY` before running locally or deploying.
-- You can use SendGrid free tier to get an API key and then set the environment variables:
-  - `SENDGRID_API_KEY`
-  - `SENDGRID_FROM_EMAIL`
-  - `TO_EMAIL`
+- The site now supports a real backend email endpoint using Resend.
+- Make sure you set `RESEND_API_KEY` before running locally or deploying.
+- Get a free Resend account: https://resend.com
+- Then set the environment variables:
+  - `RESEND_API_KEY` (from Resend dashboard)
+  - `FROM_EMAIL` (your verified sender email)
+  - `TO_EMAIL` (recipient email)
 
 ### Styles not loading?
 - Ensure `styles.css` is in the same directory as `index.html`
