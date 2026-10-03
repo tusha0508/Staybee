@@ -20,5 +20,8 @@
   ],
   "author": "Staybee",
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18"
+  }
 }

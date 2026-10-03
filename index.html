@@ -2,333 +2,323 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Staybee - Professional Property Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Staybee · Airbnb Co-Hosting</title>
+    <meta name="description" content="Staybee manages your Airbnb end to end: listing, guests, cleaning, check-ins and reviews. 30+ properties managed. Call or WhatsApp +91 98335 06755.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+<!--CONTENT-START-->
+    <!-- SVG icon sprite -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.22-8.22 8.22Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.67.31c-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.02 2.57.12.17 1.76 2.68 4.25 3.76.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.1-.22-.17-.47-.29Z"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></symbol>
+        <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></g></symbol>
+        <symbol id="i-listing" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9v11h14V9"/><path d="M10 20v-6h4v6"/></g></symbol>
+        <symbol id="i-chat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20.5l1.4-4.6A8 8 0 1 1 21 12Z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></g></symbol>
+        <symbol id="i-calendar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/><path d="m9 15 2 2 4-4"/></g></symbol>
+        <symbol id="i-sparkle" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><path d="m6.3 6.3 2.1 2.1M15.6 15.6l2.1 2.1M6.3 17.7l2.1-2.1M15.6 8.4l2.1-2.1"/></g></symbol>
+        <symbol id="i-key" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4.5"/><path d="m11.2 11.8 8.3-8.3M16.5 6.5l2.5 2.5M14 9l2 2"/></g></symbol>
+        <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2.8 2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9L12 2.8Z"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    </svg>
+
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <span class="logo">🏡 Staybee</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+    <header class="nav" id="top">
+        <div class="wrap nav-inner">
+            <a href="#top" class="brand" aria-label="Staybee home">
+                <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+                    <path d="M16 2.5 27.7 9.25v13.5L16 29.5 4.3 22.75V9.25Z" fill="var(--honey)"/>
+                    <path d="M10 15.2 16 10l6 5.2V22h-4v-4h-4v4h-4Z" fill="var(--ink)"/>
+                </svg>
+                <span>Staybee</span>
+            </a>
+            <nav class="nav-links" aria-label="Main">
+                <a href="#services">Services</a>
+                <a href="#process">How it works</a>
+                <a href="#why">Why Staybee</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a class="btn btn-ink btn-sm nav-cta" href="https://wa.me/919833506755?text=Hi%20Staybee%2C%20I%27d%20like%20to%20know%20more%20about%20your%20co-hosting%20services." target="_blank" rel="noopener">
+                <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                <span>WhatsApp us</span>
+            </a>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Transform Your Property Into Revenue</h1>
-            <p class="hero-subtitle">Professional co-hosting management for Airbnb hosts. We handle everything while you enjoy passive income.</p>
-            <button class="cta-button" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started Today</button>
-        </div>
-        <div class="hero-visual">
-            <div class="floating-card card-1">
-                <i class="fas fa-chart-line"></i>
-                <p>Revenue Up 40%</p>
-            </div>
-            <div class="floating-card card-2">
-                <i class="fas fa-star"></i>
-                <p>5-Star Reviews</p>
-            </div>
-            <div class="floating-card card-3">
-                <i class="fas fa-check-circle"></i>
-                <p>Fully Managed</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Services</h2>
-                <p>Complete solutions for hassle-free hosting</p>
-            </div>
-            <div class="services-grid">
-                <!-- Service Card 1 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="wrap hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow"><span class="dot"></span>Airbnb co-hosting, end to end</p>
+                    <h1>Your home, hosted like a <em>boutique hotel</em>.</h1>
+                    <p class="lede">Staybee runs your Airbnb day to day: the listing, every guest message, cleaning between stays, check-ins and the five-star reviews that keep bookings coming. You keep the keys and the payouts.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-wa" href="https://wa.me/919833506755?text=Hi%20Staybee%2C%20I%27d%20like%20to%20know%20more%20about%20your%20co-hosting%20services." target="_blank" rel="noopener">
+                            <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                            Chat on WhatsApp
+                        </a>
+                        <a class="btn btn-line" href="tel:+919833506755">
+                            <svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>
+                            +91 98335 06755
+                        </a>
                     </div>
-                    <h3>End-to-End Management</h3>
-                    <p>Complete handling of your Airbnb listing from start to finish for a hassle-free experience.</p>
-                </div>
-
-                <!-- Service Card 2 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3>Guest Communication</h3>
-                    <p>Professional handling of inquiries and bookings with quick responses to maximize conversions.</p>
-                </div>
-
-                <!-- Service Card 3 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3>Smart Calendar Management</h3>
-                    <p>Dynamic pricing strategy and intelligent booking management to avoid gaps and maximize revenue.</p>
-                </div>
-
-                <!-- Service Card 4 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-broom"></i>
-                    </div>
-                    <h3>Housekeeping & Maintenance</h3>
-                    <p>Professional cleaning coordination after every checkout with regular property upkeep and quality checks.</p>
-                </div>
-
-                <!-- Service Card 5 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-door-open"></i>
-                    </div>
-                    <h3>Check-in/Check-out</h3>
-                    <p>Smooth guest arrivals and departures with clear instructions and round-the-clock support.</p>
-                </div>
-
-                <!-- Service Card 6 -->
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-smile"></i>
-                    </div>
-                    <h3>Guest Experience</h3>
-                    <p>Ensuring comfortable stays, handling complaints promptly, and achieving consistent 5-star reviews.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Choose Staybee?</h2>
-                <p>Industry-leading benefits that set us apart</p>
-            </div>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-number">01</div>
-                    <h3>Revenue Optimization</h3>
-                    <p>Data-driven pricing strategies based on market demand ensure maximum returns on your investment.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-number">02</div>
-                    <h3>Real-time Tracking</h3>
-                    <p>Transparent performance dashboards with regular updates on bookings and earnings at your fingertips.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-number">03</div>
-                    <h3>Owner Convenience</h3>
-                    <p>Minimal involvement required from your side – stay in control while we manage day-to-day operations.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-number">04</div>
-                    <h3>24/7 Support</h3>
-                    <p>Round-the-clock guest support ensuring no inquiry goes unanswered and guests are always satisfied.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">500+</div>
-                    <p>Properties Managed</p>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">4.9/5</div>
-                    <p>Average Guest Rating</p>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">95%</div>
-                    <p>Occupancy Rate</p>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">$2M+</div>
-                    <p>Revenue Generated</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process">
-        <div class="container">
-            <div class="section-header">
-                <h2>How It Works</h2>
-                <p>Simple steps to get started</p>
-            </div>
-            <div class="process-timeline">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Submit Your Property</h3>
-                    <p>Share details about your property and current Airbnb setup</p>
-                </div>
-                <div class="process-arrow">→</div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Property Assessment</h3>
-                    <p>Our team reviews and optimizes your listing for maximum visibility</p>
-                </div>
-                <div class="process-arrow">→</div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>We Take Over</h3>
-                    <p>We handle all management, bookings, and guest communication</p>
-                </div>
-                <div class="process-arrow">→</div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3>Earn Passively</h3>
-                    <p>Receive regular payouts and track performance in real-time</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2>Simple Transparent Pricing</h2>
-                <p>No hidden fees, just results</p>
-            </div>
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <div class="price">20%</div>
-                    <p class="price-desc">Commission on revenue</p>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Basic property management</li>
-                        <li><i class="fas fa-check"></i> Guest communication</li>
-                        <li><i class="fas fa-check"></i> Monthly reporting</li>
+                    <ul class="hero-proof">
+                        <li><strong>30+</strong> properties managed</li>
+                        <li><strong>4.9<svg class="ic ic-star" aria-hidden="true"><use href="#i-star"/></svg></strong> average guest rating</li>
                     </ul>
                 </div>
-                <div class="pricing-card featured">
-                    <div class="badge">POPULAR</div>
-                    <h3>Professional</h3>
-                    <div class="price">25%</div>
-                    <p class="price-desc">Commission on revenue</p>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Full-service management</li>
-                        <li><i class="fas fa-check"></i> Dynamic pricing optimization</li>
-                        <li><i class="fas fa-check"></i> Weekly performance reports</li>
-                        <li><i class="fas fa-check"></i> 24/7 priority support</li>
-                    </ul>
-                </div>
-                <div class="pricing-card">
-                    <h3>Premium</h3>
-                    <div class="price">Custom</div>
-                    <p class="price-desc">For multiple properties</p>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Everything in Professional</li>
-                        <li><i class="fas fa-check"></i> Portfolio management</li>
-                        <li><i class="fas fa-check"></i> Dedicated account manager</li>
-                        <li><i class="fas fa-check"></i> Custom optimization</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Maximize Your Property's Potential?</h2>
-            <p>Join hundreds of property owners earning passive income with Staybee</p>
-            <button class="cta-button cta-large" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Start Your Free Consultation</button>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Get In Touch</h2>
-                <p>Have questions? We're here to help</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>vidhi4joshi@gmail.com</p>
+                <!-- Hero visual: a sample listing as Staybee runs it -->
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="listing">
+                        <div class="listing-photo">
+                            <svg viewBox="0 0 400 230" preserveAspectRatio="xMidYMid slice">
+                                <defs>
+                                    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0" stop-color="#F6C477"/>
+                                        <stop offset=".55" stop-color="#F2A98A"/>
+                                        <stop offset="1" stop-color="#C98C8E"/>
+                                    </linearGradient>
+                                    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0" stop-color="#3E7C78"/>
+                                        <stop offset="1" stop-color="#1F4D4A"/>
+                                    </linearGradient>
+                                </defs>
+                                <rect width="400" height="230" fill="url(#sky)"/>
+                                <circle cx="300" cy="118" r="34" fill="#FFE2A6"/>
+                                <rect y="150" width="400" height="80" fill="url(#sea)"/>
+                                <path d="M0 150h400" stroke="#FFE2A6" stroke-opacity=".5" stroke-width="2"/>
+                                <rect x="236" y="160" width="128" height="3" rx="1.5" fill="#FFE2A6" opacity=".45"/>
+                                <rect x="262" y="170" width="76" height="3" rx="1.5" fill="#FFE2A6" opacity=".3"/>
+                                <!-- villa -->
+                                <rect x="40" y="88" width="170" height="104" fill="#F7F5EE"/>
+                                <rect x="28" y="80" width="194" height="12" fill="#13292A"/>
+                                <rect x="96" y="40" width="114" height="48" fill="#ECE9DF"/>
+                                <rect x="88" y="34" width="130" height="9" fill="#13292A"/>
+                                <rect x="110" y="52" width="40" height="28" fill="#FFD27A"/>
+                                <rect x="158" y="52" width="40" height="28" fill="#FFD27A" opacity=".75"/>
+                                <rect x="56" y="104" width="58" height="62" fill="#FFD27A"/>
+                                <rect x="124" y="104" width="70" height="62" fill="#FFC85E" opacity=".85"/>
+                                <rect x="84" y="104" width="2" height="62" fill="#F7F5EE"/>
+                                <rect x="158" y="104" width="2" height="62" fill="#F7F5EE"/>
+                                <rect x="20" y="192" width="210" height="10" fill="#13292A"/>
+                                <!-- palm -->
+                                <path d="M250 196c2-26 0-48-6-66" stroke="#13292A" stroke-width="4" fill="none" stroke-linecap="round"/>
+                                <path d="M244 130c-14-6-28-2-36 8 12-2 24-2 36-8Zm0 0c10-12 26-14 38-8-14 2-26 4-38 8Zm0 0c-4-14 2-26 12-32-2 12-6 22-12 32Zm0 0c-10-10-12-24-6-34 2 12 4 24 6 34Z" fill="#13292A"/>
+                            </svg>
+                            <span class="chip chip-photo"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg> Guest favourite</span>
+                        </div>
+                        <div class="listing-body">
+                            <div class="listing-head">
+                                <div>
+                                    <p class="listing-title">Sea-facing 2BHK apartment</p>
+                                    <p class="listing-meta">Sample listing · Superhost co-hosted</p>
+                                </div>
+                                <p class="listing-rating"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg> 4.92</p>
+                            </div>
+                            <div class="cal">
+                                <div class="cal-head"><span>This month</span><span class="cal-stat"><b>27</b> of 30 nights booked</span></div>
+                                <div class="cal-grid" id="calGrid"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+91 9833506755</p>
-                        </div>
+
+                    <div class="float float-msg">
+                        <span class="float-label">Guest · 9:42 PM</span>
+                        <p>Got the check-in steps, thank you! The place looks lovely.</p>
+                        <span class="float-foot"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg> Staybee replied in 4 min</span>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
+                    <div class="float float-task">
+                        <span class="tick"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>
                         <div>
-                            <h4>Location</h4>
-                            <p>Available Nationwide</p>
+                            <p>Cleaned &amp; reset</p>
+                            <span>Ready for 3 PM check-in</span>
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <input type="text" name="name" id="name" placeholder="Your Name" required>
-                    <input type="email" name="email" id="email" placeholder="Your Email" required>
-                    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
-                    <textarea name="message" id="message" placeholder="Tell us about your property..." rows="5" required></textarea>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <!-- Stats strip -->
+        <section class="stats" aria-label="Staybee in numbers">
+            <div class="wrap stats-row">
+                <div class="stat"><span class="stat-num" data-count="30" data-suffix="+">30+</span><span class="stat-label">Properties managed</span></div>
+                <div class="stat"><span class="stat-num" data-count="4.9" data-suffix="/5">4.9/5</span><span class="stat-label">Average guest rating</span></div>
+                <div class="stat"><span class="stat-num" data-count="95" data-suffix="%">95%</span><span class="stat-label">Average occupancy</span></div>
+                <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">Guest support</span></div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="section">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="eyebrow">Services</p>
+                    <h2>Everything a five-star stay needs, handled.</h2>
+                    <p>Pick us as your co-host and we take over the parts of hosting that eat your week.</p>
+                </div>
+                <div class="services">
+                    <article class="service">
+                        <span class="service-ic"><svg aria-hidden="true"><use href="#i-listing"/></svg></span>
+                        <h3>End-to-end management</h3>
+                        <p>From setting up or polishing your listing to running it every day, we handle the whole thing.</p>
+                    </article>
+                    <article class="service">
+                        <span class="service-ic"><svg aria-hidden="true"><use href="#i-chat"/></svg></span>
+                        <h3>Guest communication</h3>
+                        <p>Fast, friendly replies to every enquiry and booking request, so more enquiries turn into stays.</p>
+                    </article>
+                    <article class="service">
+                        <span class="service-ic"><svg aria-hidden="true"><use href="#i-calendar"/></svg></span>
+                        <h3>Smart calendar</h3>
+                        <p>We manage availability and minimum stays to close gaps between bookings and keep nights filled.</p>
+                    </article>
+                    <article class="service">
+                        <span class="service-ic"><svg aria-hidden="true"><use href="#i-sparkle"/></svg></span>
+                        <h3>Housekeeping &amp; upkeep</h3>
+                        <p>Professional cleaning after every checkout, fresh linen, restocking and regular quality checks.</p>
+                    </article>
+                    <article class="service">
+                        <span class="service-ic"><svg aria-hidden="true"><use href="#i-key"/></svg></span>
+                        <h3>Check-in &amp; check-out</h3>
+                        <p>Smooth arrivals and departures with clear instructions and someone on call around the clock.</p>
+                    </article>
+                    <article class="service">
+                        <span class="service-ic"><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+                        <h3>Guest experience</h3>
+                        <p>Thoughtful touches, quick fixes and prompt issue handling that earn consistent five-star reviews.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section id="process" class="section section-tint">
+            <div class="wrap">
+                <div class="section-head">
+                    <p class="eyebrow">How it works</p>
+                    <h2>Live on Airbnb with Staybee in four steps.</h2>
+                </div>
+                <ol class="steps">
+                    <li class="step">
+                        <span class="hex">1</span>
+                        <h3>Tell us about your place</h3>
+                        <p>Call or WhatsApp us with your property details and your current Airbnb setup, if any.</p>
+                    </li>
+                    <li class="step">
+                        <span class="hex">2</span>
+                        <h3>We assess &amp; optimise</h3>
+                        <p>We visit, suggest small upgrades and rework your listing photos, title and description.</p>
+                    </li>
+                    <li class="step">
+                        <span class="hex">3</span>
+                        <h3>We take over</h3>
+                        <p>Bookings, guest messages, cleaning and check-ins all run through our team.</p>
+                    </li>
+                    <li class="step">
+                        <span class="hex">4</span>
+                        <h3>You earn, hands-free</h3>
+                        <p>Get regular payouts and clear updates on bookings and performance.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Why -->
+        <section id="why" class="section">
+            <div class="wrap why">
+                <div class="why-intro">
+                    <p class="eyebrow">Why Staybee</p>
+                    <h2>Hosting income without the hosting.</h2>
+                    <p>We treat every home like it's our own listing on the line, because our reputation is built on your reviews.</p>
+                    <a class="link-arrow" href="#contact">Talk to us about your property <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+                </div>
+                <ul class="why-list">
+                    <li>
+                        <h3>Higher earnings</h3>
+                        <p>Demand-aware calendar and listing strategy to get the most out of every season.</p>
+                    </li>
+                    <li>
+                        <h3>Full transparency</h3>
+                        <p>Regular updates on bookings, guest feedback and earnings, so you always know how your home is doing.</p>
+                    </li>
+                    <li>
+                        <h3>Minimal effort for you</h3>
+                        <p>Stay in control of the big decisions while we handle the day-to-day.</p>
+                    </li>
+                    <li>
+                        <h3>Round-the-clock support</h3>
+                        <p>Guests get answers at any hour, so small issues never turn into bad reviews.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section contact-section">
+            <div class="wrap">
+                <div class="contact">
+                    <div class="contact-copy">
+                        <p class="eyebrow eyebrow-light">Contact</p>
+                        <h2>Let's talk about your property.</h2>
+                        <p>Call us or send a WhatsApp message. We usually reply within a few minutes.</p>
+                    </div>
+                    <div class="contact-card">
+                        <span class="contact-label">Call or WhatsApp</span>
+                        <div class="contact-number">
+                            <span id="phoneNumber">+91 98335 06755</span>
+                            <button type="button" class="copy-btn" id="copyBtn" aria-label="Copy phone number">
+                                <svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg>
+                                <span id="copyText">Copy</span>
+                            </button>
+                        </div>
+                        <div class="contact-actions">
+                            <a class="btn btn-wa" href="https://wa.me/919833506755?text=Hi%20Staybee%2C%20I%27d%20like%20to%20know%20more%20about%20your%20co-hosting%20services." target="_blank" rel="noopener">
+                                <svg class="ic" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                                Chat on WhatsApp
+                            </a>
+                            <a class="btn btn-honey" href="tel:+919833506755">
+                                <svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>
+                                Call now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Staybee</h4>
-                    <p>Transform your property into a revenue-generating machine.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Staybee. All rights reserved.</p>
-            </div>
+        <div class="wrap footer-inner">
+            <a href="#top" class="brand brand-sm" aria-label="Staybee home">
+                <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+                    <path d="M16 2.5 27.7 9.25v13.5L16 29.5 4.3 22.75V9.25Z" fill="var(--honey)"/>
+                    <path d="M10 15.2 16 10l6 5.2V22h-4v-4h-4v4h-4Z" fill="var(--ink)"/>
+                </svg>
+                <span>Staybee</span>
+            </a>
+            <nav class="footer-links" aria-label="Footer">
+                <a href="#services">Services</a>
+                <a href="#process">How it works</a>
+                <a href="#why">Why Staybee</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <p class="footer-copy">&copy; <span id="year">2026</span> Staybee. Airbnb co-hosting, available nationwide.</p>
         </div>
     </footer>
 
+    <!-- Floating WhatsApp button -->
+    <a class="wa-float" href="https://wa.me/919833506755?text=Hi%20Staybee%2C%20I%27d%20like%20to%20know%20more%20about%20your%20co-hosting%20services." target="_blank" rel="noopener" aria-label="Chat with Staybee on WhatsApp">
+        <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+        <span class="wa-float-text">Chat with us</span>
+    </a>
+<!--CONTENT-END-->
     <script src="script.js"></script>
 </body>
 </html>

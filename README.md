@@ -8,21 +8,19 @@ A modern, minimalist, and aesthetic website for Staybee co-hosting services. Bui
 - **Responsive Layout** - Works perfectly on all devices (mobile, tablet, desktop)
 - **Fast Loading** - Lightweight static site with no dependencies
 - **SEO Optimized** - Semantic HTML structure
-- **Contact Form** - Built-in contact form for lead capture and email notifications
-- **Email Backend** - Node + Resend API support for reliable form delivery without SMTP
+- **Call & WhatsApp contact** - Click-to-call number and WhatsApp buttons (incl. a floating WhatsApp button) for +91 98335 06755
 - **Performance Optimized** - Optimized images and CSS for fast load times
 - **Accessibility** - WCAG compliant with proper color contrast and keyboard navigation
 
 ## 🎨 Sections
 
-- **Hero Section** - Eye-catching headline with floating stat cards
-- **Services Grid** - 6 professional services with icons
-- **Features Section** - Key benefits with numbered list
-- **Statistics** - Real-time counter animations
-- **Process Timeline** - Step-by-step how it works
-- **Pricing Cards** - Transparent pricing structure
-- **Contact Form** - Lead capture and inquiry management
-- **Footer** - Social links and navigation
+- **Hero Section** - Headline, WhatsApp/call buttons and a sample listing card
+- **Stats Strip** - 30+ properties, 4.9/5 rating, 95% occupancy, 24/7 support
+- **Services Grid** - 6 services with inline SVG icons
+- **How It Works** - 4-step process
+- **Why Staybee** - Key benefits
+- **Contact** - Phone number with copy button, WhatsApp and call buttons
+- **Footer** - Navigation
 
 ## 🚀 Getting Started Locally
 
@@ -130,7 +128,6 @@ Edit the CSS variables in `styles.css` (line ~15):
 ### Content
 Edit `index.html` to:
 - Change service descriptions
-- Update pricing
 - Modify contact information
 - Add/remove sections
 
@@ -214,7 +211,7 @@ MIT License - Feel free to use and modify
 
 ## 📞 Contact & Support
 
-Visit the contact form on the website or email: hello@staybee.co
+Call or WhatsApp: +91 98335 06755
 
 ---
 
